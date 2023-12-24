@@ -10,4 +10,5 @@ outputs:
     description: 'Time of greeting'
 runs:
   using: 'node16'
+  pre: 'npm ci'
   main: 'index.js'
