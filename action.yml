@@ -11,8 +11,3 @@ outputs:
 runs:
   using: 'node16'
   main: 'index.js'
-  steps:
-    - name: 'Install Dependencies'
-      run: npm ci
-    - name: 'Run index.js'
-      run: node index.js
