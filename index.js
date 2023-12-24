@@ -1,12 +1,12 @@
-import { getInput, setOutput, setFailed } from '@actions/core';
-import moment from 'moment';
+const core = require('@actions/core');
+const moment = require('moment');
 
 try {
-    const name = getInput('name');
+    const name = core.getInput('name');
     console.log(`Hello, ${name}. We appreciate your business!`);
     const timestamp = moment().format();
     console.log(`Greeting issued at: ${timestamp}`);
-    setOutput("timestamp", timestamp);
+    core.setOutput("timestamp", timestamp);
 } catch (error) {
-    setFailed(error.message);
+    core.setFailed(error.message);
 }
